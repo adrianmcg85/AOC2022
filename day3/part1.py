@@ -14,5 +14,3 @@ for rucksack in data:
         if char in c1 and char in c2:
             output += priortiy + 1
 print(output)
-# 14131 too high
-# 7463 to low
