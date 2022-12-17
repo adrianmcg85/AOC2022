@@ -21,9 +21,21 @@ for line in data:
                 sizesDict['/'.join(path[:i])] += size
         except:
             pass
-ans = 0
+p1 = 0
+
+file_space = 70000000
+space_required = 30000000
+file_thresh = space_required - (file_space - sizesDict['/'])
+can_del = []
 for k, v in sizesDict.items():
     if v <= 100000:
-        ans += v
+        p1 += v
+    if v >= file_thresh:
+        can_del.append(v)
+p2 = min(can_del)
 
-print(ans)
+for i in sizesDict:
+    sizesDict[i]
+
+print('Part 1: ' + str(p1))
+print('Part 2: ' + str(p2))
